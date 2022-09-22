@@ -13,6 +13,7 @@ main {
   padding-top: 65px;
 }
 aside {
+  transition: 250ms;
   background: var(--app-darklight2);
   width: 250px;
   min-height: 100vh;
