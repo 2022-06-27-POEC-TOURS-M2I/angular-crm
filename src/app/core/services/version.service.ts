@@ -12,7 +12,7 @@ export class VersionService {
   }
 
   public incrementVersion(): void {
-    console.log(this.numVersion.value + 1);
+    // console.log(this.numVersion.value + 1);
     this.numVersion.next(this.numVersion.value + 1);
   }
 }
