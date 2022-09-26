@@ -9,10 +9,24 @@ import { OrdersService } from '../../services/orders.service';
 })
 export class PageListOrdersComponent implements OnInit {
   public title: string;
+  public route: string;
+  public label: string;
   public collection!: Order[];
+  public headers: string[];
 
   constructor(private ordersService: OrdersService) {
     this.title = 'list of orders';
+    this.route = 'add';
+    this.label = 'add order';
+    this.headers = [
+      'Type',
+      'Client',
+      'Durée',
+      'Tjm HT',
+      'Total HT',
+      'Total TTC',
+      'Etat',
+    ];
 
     this.ordersService.collection$.subscribe((data) => {
       console.log(data);
